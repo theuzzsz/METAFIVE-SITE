@@ -1,110 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>META FIVE IND.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meta Five - Otimizações para FiveM</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       background-color: #0a0a0a;
-      color: #ffffff;
+      color: #dcdcdc;
+      font-family: 'Segoe UI', sans-serif;
     }
+
     header {
-      background-color: #6d2c6e;
-      padding: 40px;
-      text-align: center;
-      font-size: 48px;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-    .planos {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      margin-top: 30px;
+      align-items: center;
+      padding: 80px 20px 50px;
+      background: linear-gradient(to bottom, #0a0a0a, #151515);
     }
-    .plano {
-      border: 2px solid #6d2c6e;
-      border-radius: 12px;
-      padding: 24px;
-      width: 280px;
-      background-color: #1a1a1a;
+
+    header img {
+      max-width: 420px;
+      width: 90%;
+      animation: fadeIn 2s ease;
     }
-    .plano h3 {
-      color: #6d2c6e;
-      font-size: 24px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .social-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 40px;
-      flex-wrap: wrap;
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
     }
-    .social-buttons a {
-      padding: 12px 20px;
-      border-radius: 8px;
+
+    .hero h1 {
+      color: #b84dff;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #aaa;
+    }
+
+    .btn-discord {
+      background: #b84dff;
+      color: #fff;
+      padding: 15px 35px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
       text-decoration: none;
-      font-weight: bold;
-      color: white;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px #b84dff80;
     }
-    .instagram { background-color: #e4405f; }
-    .youtube { background-color: #ff0000; }
-    .discord { background-color: #5865F2; }
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #121212;
+
+    .btn-discord:hover {
+      background: #9a3fd1;
+      box-shadow: 0 0 20px #b84dffb0;
+    }
+
+    .section {
+      padding: 60px 20px;
+      background-color: #0e0e0e;
       text-align: center;
-      font-size: 14px;
-      color: #888;
+    }
+
+    .section h2 {
+      color: #b84dff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    .features {
+      background-color: #111;
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .feature {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 30px 20px;
+      transition: 0.3s;
+      border: 1px solid #2a2a2a;
+    }
+
+    .feature:hover {
+      border-color: #b84dff;
+      transform: scale(1.03);
+    }
+
+    .feature h3 {
+      color: #b84dff;
+      margin-bottom: 15px;
+    }
+
+    .feature ul {
+      list-style: none;
+      padding-left: 0;
+      color: #ccc;
+      text-align: left;
+    }
+
+    .influencers a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease;
+      border: 1px solid #2a2a2a;
+    }
+
+    .influencers a:hover {
+      background-color: #b84dff20;
+      border-color: #b84dff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      background-color: #0a0a0a;
+      color: #555;
+    }
+
+    footer a {
+      color: #b84dff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
   <header>
-    META FIVE IND.
+    <img src="meta.png" alt="Logo Meta Five">
   </header>
 
-  <section>
-    <h2>Revolucionando o cenário do FiveM</h2>
-    <p>A Meta Five é uma empresa no Discord que oferece arquivos, mods exclusivos e otimizações de desempenho para jogadores de FiveM.</p>
-    <p>Nosso objetivo é entregar performance, estabilidade e qualidade com um atendimento único e comunidade ativa.</p>
-
-    <div class="planos">
-      <div class="plano">
-        <h3>META BASIC</h3>
-        <p>R$19,90</p>
-        <p>Pacote com diversos serviços de otimização</p>
-        <p>Painel básico incluso</p>
-      </div>
-
-      <div class="plano">
-        <h3>META PLUS</h3>
-        <p>R$29,90</p>
-        <p>Ainda mais otimizações e melhorias</p>
-        <p>Painel profissional incluso</p>
-      </div>
-    </div>
-
-    <p style="margin-top: 24px;">Vendas disponíveis apenas via nosso Discord oficial</p>
+  <section class="hero">
+    <h1>Otimizações Extremas para FiveM</h1>
+    <p>Reduza o lag, aumente seu FPS e transforme sua gameplay com nosso pack exclusivo para PCs fracos e fortes.</p>
+    <a href="https://discord.gg/4gUqN7RpGh" target="_blank" class="btn-discord">Entrar no nosso Discord</a>
   </section>
 
-  <section class="social-buttons">
-    <a class="instagram" href="https://www.instagram.com/matheusalv._" target="_blank">Instagram CEO Theuz</a>
-    <a class="instagram" href="https://www.instagram.com/duduu_vp" target="_blank">Instagram CEO Dudu</a>
-    <a class="youtube" href="https://www.youtube.com/@MetaFiveids" target="_blank">YouTube Meta Five</a>
-    <a class="youtube" href="https://www.youtube.com/@dudufps4m" target="_blank">YouTube Dudu</a>
-    <a class="discord" href="https://discord.gg/4gUqN7RpGh" target="_blank">Nosso Discord</a>
+  <!-- SOBRE -->
+  <section class="section">
+    <h2>Nossa História</h2>
+    <p>
+      A <strong>Meta Five</strong> foi criada por dois amigos de Minas Gerais que se conheceram ainda no ensino fundamental. 
+      Apaixonados por tecnologia e games, eles decidiram unir forças para criar uma solução que ajudasse jogadores de FiveM 
+      a terem mais desempenho, mesmo com computadores mais simples.
+    </p>
+    <br>
+    <p>
+      Manter o seu PC otimizado não é só uma questão de FPS — é saúde pro seu computador.  
+      Um sistema limpo e bem ajustado pode até dobrar a vida útil do seu hardware.  
+      Além disso, otimizações constantes evitam travamentos, melhoram o tempo de resposta do sistema 
+      e garantem uma experiência muito mais fluida em qualquer jogo ou aplicativo.  
+      Quem cuida da máquina, joga melhor. 💻✨
+    </p>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="features">
+    <div class="feature">
+      <h3>🎮 Meta Basic</h3>
+      <p><strong>Pack de Otimização BASIC</strong><br>
+      Ideal pra quem quer mais FPS e menos lag, sem complicação!</p>
+      <ul style="margin-top: 15px;">
+        <li>✔ Otimizações essenciais pra deixar seu jogo mais leve</li>
+        <li>✔ Painel básico incluso pra ajustes rápidos e simples</li>
+        <li>✔ Perfeito pra quem quer melhorar o desempenho sem gastar muito</li>
+      </ul>
+      <p style="margin-top: 20px; color: #b84dff; font-weight: bold;">💰 R$ 19,90</p>
+    </div>
+
+    <div class="feature" style="border-color: #b84dff;">
+      <h3>⚡ Meta Plus</h3>
+      <p><strong>Pack de Otimização PLUS</strong><br>
+      Pra quem quer extrair o máximo do seu PC!</p>
+      <ul style="margin-top: 15px;">
+        <li>✔ Otimizações avançadas pra melhorar FPS</li>
+        <li>✔ Redução de travamentos e melhor performance</li>
+        <li>✔ Painel profissional com mais opções e controle total</li>
+        <li>✔ Feito pra quem busca o melhor desempenho no FiveM</li>
+      </ul>
+      <p style="margin-top: 20px; color: #b84dff; font-weight: bold;">💰 R$ 29,90</p>
+    </div>
+  </section>
+
+  <!-- INFLUENCIADORES -->
+  <section class="section">
+    <h2>Influenciadores Parceiros</h2>
+    <p>Esses criadores confiam e divulgam a Meta Five:</p>
+    <div class="influencers">
+      <a href="https://www.youtube.com/@dudufps4m" target="_blank">🎥 DuduFPS4M</a>
+      <a href="https://www.youtube.com/@sabaofivem-c9u" target="_blank">🎥 Sabão FiveM</a>
+    </div>
   </section>
 
   <footer>
-    © 2025 Meta Five IND. Todos os direitos reservados.
+    <p>© 2025 Meta Five | <a href="https://www.youtube.com/@MetaFiveids" target="_blank">Nosso Canal</a></p>
   </footer>
+
 </body>
 </html>
